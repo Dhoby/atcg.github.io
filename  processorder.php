@@ -1,14 +1,6 @@
 //Listing 2.2 processorder.php—Final Version of the Order Processing Script
 
-<?php
-  // create short variable names
-  $tireqty = (int) $_POST['tireqty'];
-  $oilqty = (int) $_POST['oilqty'];
-  $sparkqty = (int) $_POST['sparkqty'];
-  $address = preg_replace('/\t|\R/',' ',$_POST['address']);
-  $document_root = $_SERVER['DOCUMENT_ROOT'];
-  $date = date('H:i, jS F Y');
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -18,6 +10,8 @@
   <body>
     <h1>Bob's Auto Parts</h1>
     <h2>Order Results</h2> 
+
+
     <?php
       echo "<p>Order processed at ".date('H:i, jS F Y')."</p>";
       echo "<p>Your order is as follows: </p>";
@@ -79,5 +73,7 @@
 
        echo "<p>Order written.</p>";
     ?>
+
+
   </body>
 </html>
